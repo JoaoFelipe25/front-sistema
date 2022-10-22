@@ -77,61 +77,69 @@ function Formulario(){
     }
 
     return(
-        <div>
-            <h1>Cadastrar Servico</h1>
+        <div className='servico'>
 
-            <form action="" onSubmit={handleSubmit}>
+            <h1 className='title-form'>Cadastrar Servico</h1>
 
-                <div>
+            <form className='form-servico' action="" onSubmit={handleSubmit}>
 
-                    <div>
+                <div >
+
+                    <div className='campo-servico'>
                         <label htmlFor="">Nome</label>
-                        <input onChange={handleChange} value={servico.nomeCliente || ''} name="nomeCliente" type="text" />
+                        <input className='input-servico' onChange={handleChange} value={servico.nomeCliente || ''} name="nomeCliente" type="text" />
                     </div>
 
-                    <div>
+                    <div className='campo-servico'>
                         <label htmlFor="">Data Inicio</label>
-                        <input onChange={handleChange} value={servico.dataInicio || ''} name="dataInicio" type="date" />
+                        <input className='input-servico' onChange={handleChange} value={servico.dataInicio || ''} name="dataInicio" type="date" />
                     </div>
 
-                    <div>
+                    <div className='campo-servico'>
                         <label htmlFor="">Data de Termino</label>
-                        <input onChange={handleChange} value={servico.dataTermino || ''} name="dataTermino"  type="date" />
+                        <input className='input-servico' onChange={handleChange} value={servico.dataTermino || ''} name="dataTermino"  type="date" />
                     </div>
 
-                    <div>
+                    <div className='campo-servico'>
                         <label htmlFor="">Descrição do Servico</label>
-                        <input onChange={handleChange} value={servico.descricaoServico || ''} name="descricaoServico" type="text" />
+                        <input className='input-servico' onChange={handleChange} value={servico.descricaoServico || ''} name="descricaoServico" type="text" />
                     </div>
 
-                    <div>
+                    <div className='campo-servico'>
                         <label htmlFor="">Valor do Servico</label>
-                        <input onChange={handleChange} value={servico.valorServico || ''} name="valorServico" type="number" />
+                        <input className='input-servico' onChange={handleChange} value={servico.valorServico || ''} name="valorServico" type="number" />
                     </div>
 
-                    <div>
+                    <div className='campo-servico'>
                         <label htmlFor="">Valor Pago</label>
-                        <input onChange={handleChange} value={servico.valorPago || ''} name="valorPago" type="number" />
+                        <input className='input-servico' onChange={handleChange} value={servico.valorPago || ''} name="valorPago" type="number" />
                     </div>
 
-                    <div>
+                    <div className='campo-servico'>
                         <label htmlFor="">Data de Pagamento</label>
-                        <input onChange={handleChange} value={servico.dataPagamento || ''} name="dataPagamento" type="date" />
+                        <input className='input-servico' onChange={handleChange} value={servico.dataPagamento || ''} name="dataPagamento" type="date" />
                     </div>
 
-                    <input type="submit" value='Cadastrar'/>
+                    <div className='button-form'>
 
-                    <button onClick={limpar} >Limpar</button>
+                        <input type="submit" value='Cadastrar'/>
 
+                        <button onClick={limpar} >Limpar</button>
+
+                    </div>
                 </div>
 
             </form>
 
             <hr />
 
-            <button onClick={buscarTodos}>Listar Todos</button>
-            <button onClick={pagamentoPendente}>Pagamento Pendente</button>
-            <button onClick={buscarCancelado}>Serviços Cancelados</button>
+            <div className='button-buscas'>
+
+                <button onClick={buscarTodos} className='todos'>Listar Todos</button>
+                <button onClick={pagamentoPendente} className='pendente'>Pagamento Pendente</button>
+                <button onClick={buscarCancelado} className='cancelado'>Serviços Cancelados</button>
+
+            </div>
 
             <table>
                 <thead>
@@ -166,14 +174,14 @@ function Formulario(){
                             <td>{serv.status}</td>
                             <td>
                                 {serv.status!='cancelado' &&
-                                    <button onClick={()=>setServico(serv)}>Alterar</button>
+                                    <button onClick={()=>setServico(serv)} className='todos'>Alterar</button>
                                 }
 
                                 {serv.status!='cancelado' &&
-                                     <button onClick={()=>excluir(serv.id)} >Excluir</button>
+                                     <button onClick={()=>excluir(serv.id)} className='excluir'>Excluir</button>
                                 }
                                 
-                                <button onClick={()=>cancelar(serv.id)} >Cancelar</button>
+                                <button onClick={()=>cancelar(serv.id)} className='cancelado'>Cancelar</button>
                             </td>
 
                         </tr>
@@ -184,6 +192,7 @@ function Formulario(){
 
             </table>
             
+            <br/>
             
         </div>
     )

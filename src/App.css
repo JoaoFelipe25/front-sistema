@@ -1,0 +1,168 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;  
+    margin: 0px;
+    padding: 0px;
+    border: 0px;  
+    outline: 0px;   
+  }
+  .servico{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(140, 193, 240);
+  }
+  .nav-user{
+    /* background-color: brown; */
+    width: 100%;
+  
+    display: flex;
+    justify-content: end;
+    
+    line-height: 2;
+  }
+  .nav-items{
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+    /* background-color: aqua; */
+  
+    font-size: 20px;
+    margin-right: 80px;
+    margin-top: 30px;
+  
+  }
+  .nav-items li{
+    list-style-type: none;
+  }
+  .nav-items li a,strong{
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .title-form{
+    margin-top: 50px;
+  }
+  .form-servico{
+    margin-top: 20px;
+  }
+  .campo-servico label{
+    font-size: 25px;
+    line-height: 2;
+    font-weight: bold;
+  }
+  .input-servico{
+    display: block;
+    width: 450px;
+    height: 30px;
+    border-radius: 5px;  
+    
+  }
+  .button-form{
+    margin-top: 20px;
+  }
+  .button-form input{ 
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    margin-right: 30px;
+    font-weight: bold;
+    background-color: rgb(19, 168, 19);
+  }
+  .button-form button{ 
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(243, 243, 57);
+  }
+  .button-form input:hover{ 
+    background-color: gray;
+    transition: 0.3s;
+    
+  }
+  .button-form button:hover{ 
+    background-color: gray;
+    transition: 0.3s;
+  }
+  
+  /*----- estilo resposta do formulario ----*/
+  
+  .button-buscas{
+    margin-top: 80px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .button-buscas button{
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .button-buscas button:hover{
+    background-color: gray;
+    transition: 0.5s;
+  }
+  .todos{
+    background-color: rgb(67, 67, 253);
+    color: white;
+  }
+  .pendente{
+    background-color: rgb(54, 53, 53);
+    color: white;
+  }
+  .cancelado{
+    background-color: rgb(19, 168, 19);
+    color: white;
+  }
+  
+  table{
+    background-color: azure;
+    margin-top: 50px;
+    border-radius: 10px;
+    position: relative;
+  }
+  thead{
+    margin-top: 140px;
+  }
+  th{
+    padding: 5px;
+    line-height: 3;
+  }
+  tr{
+    margin-top: 50px;
+  }
+  
+  tbody{
+    border: solid 5px red;
+  }
+  td{
+    padding: 5px;
+    border: solid 2px gray;
+    border-radius: 10px;
+  }
+  
+  td button{
+    width: 50px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 2; 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  td button:hover{
+    background-color: gray;
+    transition: 0.5s;
+  }
+  .excluir{
+    background-color: red;
+    color: white;
+  }
