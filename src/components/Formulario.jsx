@@ -173,14 +173,8 @@ function Formulario(){
                             <td>{serv.dataPagamento}</td>
                             <td>{serv.status}</td>
                             <td>
-                                {serv.status!='cancelado' &&
-                                    <button onClick={()=>setServico(serv)} className='todos'>Alterar</button>
-                                }
-
-                                {serv.status!='cancelado' &&
-                                     <button onClick={()=>excluir(serv.id)} className='excluir'>Excluir</button>
-                                }
-                                
+                                <button onClick={()=>setServico(serv)} className='todos'>Alterar</button>                       
+                                <button onClick={()=>excluir(serv.id)} className='excluir'>Excluir</button>                          
                                 <button onClick={()=>cancelar(serv.id)} className='cancelado'>Cancelar</button>
                             </td>
 
